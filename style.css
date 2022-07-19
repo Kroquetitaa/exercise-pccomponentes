@@ -75,11 +75,12 @@
     display: flex;
     flex-direction: column;
     padding: 0;
+    margin-bottom: 30px;
 }
 
 .footer{
     grid-area: footer;
-    background-color: orange;
+    background-color: black;
 }
 
 /* -------- NAVBAR--------- */
@@ -345,4 +346,26 @@
     border-radius: 3px;
     font-size: 15px;
     color: white;
+}
+
+/* ------Sub-nav----- */
+
+.sub-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sub-nav > div > ul > li{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    list-style-type: none;
+    font-size: 14px;
+    color: white;
+}
+
+.title > p{
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
 }
