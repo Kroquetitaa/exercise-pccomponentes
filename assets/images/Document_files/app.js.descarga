@@ -1,0 +1,8 @@
+if( "name" in element ) {
+    if( "name" === 'Justin Bieber'){
+        myfigure = ``;
+    }
+    myfigure = ``;
+}else {
+    myfigure = ``;
+}

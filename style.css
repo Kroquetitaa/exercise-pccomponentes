@@ -1,0 +1,348 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 0.25fr 2.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar navbar"
+    "all-categories all-categories all-categories all-categories all-categories all-categories"
+    ". special special special special ."
+    ". category category category category ."
+    ". info info info info ."
+    ". mini-nav mini-nav mini-nav mini-nav ."
+    ". pc-list pc-list pc-list pc-list ."
+    ". blog blog blog blog ."
+    "footer footer footer footer footer footer"
+    ;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: white;
+    display: flex;
+    margin: 15px;
+}
+
+.all-categories{
+    grid-area: all-categories;
+    display: flex;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    font-size: 12.5px;
+    padding: 10px;
+}
+
+.special{
+    grid-area: special;
+    background-color: white;
+}
+.category{
+    grid-area: category;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.info {
+    grid-area: info;
+    background-color: white;
+}
+
+.mini-nav{
+    grid-area: mini-nav;
+    background-color: white;
+    display: flex;
+}
+
+.pc-list{
+    grid-area: pc-list;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog{
+    grid-area: blog;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: orange;
+}
+
+/* -------- NAVBAR--------- */
+
+.navbar > ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.menu--search{
+    width: 450px;
+}
+
+ .menu--search > input {
+    width: 100%;
+    height: 3.5vh;
+}
+
+.menu--compromise, .menu--account, .menu--carrito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu--compromise > img, .menu--account > img, .menu--carrito > img {
+    width: 32px;
+}
+
+/* ------------CATEGORIES-list----------- */
+
+.all-categories__menu{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+/* ------------special----------- */
+
+.special__image > img{
+    width: 100%;
+}
+
+.special__list {
+    display: flex;
+    height: 10vh;
+}
+
+.special__list > ul > li > img {
+    padding-left: 10px;
+    width: 24px;
+}
+
+.special__list > ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.special__list > ul > li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    height: 5vh;
+}
+
+.special__list > ul > li > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: gray;
+    font-weight: bold;
+}
+
+.special__list > ul > li:hover , .special__list > ul > li > p:hover{
+    background-color: lightgrey;
+    color: black;
+}
+
+
+/* ---------category------------ */
+
+.category{
+    width: 100%;
+    display: flex;
+}
+
+.category--list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+
+.category--list > li  {
+    display: flex;
+    flex-direction: column;
+}
+
+.category--list > li > span {
+    align-self: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.category--list__image > img{
+    width: 150px;
+} 
+
+.category--title{
+    font-weight: normal;
+    color: gray;
+    font-size: 24px;
+}
+
+.category > div > hr, .pc-list > div > hr, .blog > div > hr{
+    width: 30px;
+    background-color: #FF6000;
+    border: 1.5px solid #FF6000;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.category--title > b {
+    color: black;
+}
+
+/* -------------mini-nav-------- */
+
+.mini-nav > ul {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mini-nav > ul > li  {
+    display: flex;
+    align-items: center;
+}
+
+.vl{
+    border-left: 2px solid gray;
+    height: 40px;
+}
+
+
+/* --------------BLOG-------------- */
+
+.blog-.list > ul {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.blog > div > h2 {
+    color: gray;
+    font-weight: normal;
+}
+
+.blog--list > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.blog--list > ul > li > div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.blog--list > ul > li > div > h3 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.blog--list > ul > li > img{
+    width: 95%;
+    height: 15vh;
+}
+
+/* --------------UL LIST----------- */
+
+.category--title{
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+
+.ul-list{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.ul-list > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ul-list > li > img {
+    width: 250px;
+    height: 250px;
+    margin: 25px;
+}
+
+.ul-list > li > p.name {
+    color: gray;
+    font-size: 12px;
+}
+
+.ul-list > li> .special-prices {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 10px;
+}
+
+.ul-list > li> .special-prices > .price {
+    margin-right: 10px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.ul-list > li> .special-prices > .discount {
+    color: gray;
+    margin-right: 5px;
+    font-size: 13px;
+    text-decoration:line-through
+}
+
+.ul-list > li> .special-prices > .percentage-Discount {
+    background-color: red;
+    margin: 10px;
+    border-radius: 3px;
+    font-size: 15px;
+    color: white;
+}
